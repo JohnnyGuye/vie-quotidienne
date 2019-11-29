@@ -1,0 +1,27 @@
+.welcome-card img {
+  max-height: 35vh;
+  overflow: hidden;
+}
+
+.times-container {
+    margin: 0 10px;
+    height: 70vh;
+}
+.times {
+  height: 1%;
+  margin-bottom: 1px;
+  width:80%;
+  margin-left: 1%;
+  border-radius: 5px;
+  background-color:  #fdd2;
+  box-shadow: 0 1px 1px 1px #0002;
+}
+
+.times.active {
+  background-color:  #fdd8;
+}
+
+.hour {
+  position: relative;
+  left: 100%;
+}

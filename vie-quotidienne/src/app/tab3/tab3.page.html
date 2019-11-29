@@ -1,0 +1,65 @@
+<ion-content color="tertiary">
+
+  <ion-title>{{sets[currentSet].value}}</ion-title>
+  <ion-list color="tertiary">
+    <ion-item-sliding color="tertiary">
+      <ion-item color="tertiary">
+        <ion-datetime displayFormat="h:mm a" value="06:00Z"></ion-datetime> <span class="indent"></span>En semaine
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="danger" (click)="unread(item)">Suprrimer</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+    <ion-item-sliding>
+      <ion-item color="tertiary">
+        <ion-datetime displayFormat="h:mm a" value="11:15Z"></ion-datetime> <span class="indent"></span>Dimanche
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="danger" (click)="unread(item)">Suprrimer</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+    <ion-item-sliding>
+      <ion-item color="tertiary">
+        
+          <ion-datetime displayFormat="h:mm a" value="07:45"></ion-datetime>  <span class="indent"></span>Samedi
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="danger" (click)="unread(item)">Suprrimer</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+    <ion-item-sliding>
+      <ion-item color="tertiary">
+        
+          <ion-datetime displayFormat="h:mm a" value="08:00Z"></ion-datetime> <span class="indent"></span>Une fois
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="danger" (click)="unread(item)">Suprrimer</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+    
+    <ion-item color="tertiary">
+      <ion-button color="secondary" block>+</ion-button>
+    </ion-item>
+  
+  </ion-list>
+  
+  <ion-select color="primary" [(ngModel)]="currentSet" okText="Okay" cancelText="Dismiss">
+    <ion-select-option *ngFor="let set of sets" value="{{set.key}}">{{set.value}}</ion-select-option>
+    <!-- <ion-select-option value="brown">Set par défaut</ion-select-option>
+    <ion-select-option value="brown">Semaine de cours</ion-select-option>
+    <ion-select-option value="blonde">Voyage à Toronto</ion-select-option>
+    <ion-select-option value="black">Préparation au marathon</ion-select-option>
+    <ion-select-option value="red">Tournée Européenne</ion-select-option> -->
+  </ion-select>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" color="secondary">
+    <ion-fab-button>
+      <ion-icon name="school"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="end">
+      <ion-fab-button><ion-icon name="school"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+  
+</ion-content>
+

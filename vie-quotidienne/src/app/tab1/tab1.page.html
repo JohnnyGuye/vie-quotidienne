@@ -1,0 +1,28 @@
+
+
+<ion-content color="tertiary">
+
+  <ion-item color="tertiary">
+    <p>
+      Survolez les régions de la journée dans lesquelles vous ne voulez pas dormir
+    </p>
+  </ion-item>
+  <div class="times-container">
+    <div *ngFor="let time of times" 
+      class="times" 
+      [class.active]="time.hours > 7 && time.hours < 21 && time.hours != 13"
+      >
+      <div class="hour" *ngIf="time.hours % 3 == 0 && time.minutes == 0">
+        {{time.hours}}:{{time.minutes || "00" }}<br/>
+        <span *ngIf="time.hours == 0 && time.minutes == 0">{{days[time.day]}}</span>
+      </div>
+    </div>
+  </div>
+  
+  <ion-item color="tertiary">
+    <ion-input placeholder="Nom du set"></ion-input>
+  </ion-item>
+  <ion-item color="tertiary">
+    <ion-button color="secondary">Génère mes réveils</ion-button>
+  </ion-item>
+</ion-content>
